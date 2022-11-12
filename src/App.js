@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Quote from './Quote';
 
 function App() {
+  const [msg, setMsg] = useState([]);
+
+  useEffect(() => {
+    const fetch = async () => {
+      const response = await axios(`https://api.goprogram.ai/inspiration`);
+      setMsg(response.data);
+    };
+    fetch();
+  }, []);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>Inspirational Quote</p>
+      <Quote msg={msg} />
     </div>
   );
 }
