@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-
 body {
   font-family: "Quicksand", sans-serif;
 }
@@ -11,9 +10,9 @@ body {
 #dark {
   background-color: #5b1d3b;
   color: white;
-  .card {
-    border-color: whitesmoke;
-  }
+}
+#dark .card {
+  border-color: whitesmoke;
 }
 
 .main-comp {
@@ -30,6 +29,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .card {
   margin-top: 5rem;
   width: 50%;
@@ -46,4 +46,4 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
+}/*# sourceMappingURL=style.css.map */

@@ -3,7 +3,7 @@ import Photo from './Photo';
 
 function Quote({ msg }) {
   return (
-    <div>
+    <div className='quote-card'>
       <Photo />
       {
         Object.values(msg).map((value) => (
